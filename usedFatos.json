@@ -1,0 +1,32 @@
+[
+    {
+        "titulo": "10 Curiosidades sobre o cérebro",
+        "fatos": [
+            "O cérebro humano tem cerca de 86 bilhões de neurônios.",
+            "O cérebro consome aproximadamente 20% do oxigênio e calorias do corpo.",
+            "O córtex cerebral, a camada externa do cérebro, é responsável por funções como linguagem, pensamento e percepção.",
+            "O cérebro humano é mais ativo à noite do que durante o dia.",
+            "O cérebro pode processar informações tão rápido quanto 120 bits por segundo.",
+            "A memória de curto prazo pode armazenar informações por até 20 a 30 segundos.",
+            "Apenas 10% do cérebro humano é usado conscientemente, enquanto o restante é usado pelo subconsciente.",
+            "O cérebro de um adulto pesa cerca de 1,4 kg.",
+            "A música pode estimular diferentes áreas do cérebro e ter efeitos positivos no humor e na cognição.",
+            "O cérebro continua a se desenvolver e se reorganizar ao longo da vida."
+        ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre a história",
+        "fatos": [
+            "Cleópatra, a última rainha do Antigo Egito, viveu mais perto da era da Lua aterrissar do que da construção das Grandes Pirâmides.",
+            "A Revolução Francesa durou de 1789 a 1799, mas a última execução pela guilhotina ocorreu em 1977.",
+            "Acredita-se que a Muralha da China tenha mais de 21.000 km de extensão.",
+            "A Idade Média durou cerca de 1000 anos, de 476 a 1453.",
+            "A Biblioteca de Alexandria, uma das maiores bibliotecas da antiguidade, foi destruída em um incêndio e muitos dos registros históricos foram perdidos.",
+            "O primeiro computador eletrônico foi construído em 1946 e ocupava todo um prédio.",
+            "A Peste Negra, uma pandemia que ocorreu no século XIV, matou aproximadamente 25 milhões de pessoas na Europa.",
+            "A rainha Elizabeth II, atual monarca do Reino Unido, já conheceu mais de 12 papas durante seu reinado.",
+            "O Monte Everest, a montanha mais alta do mundo, foi escalado pela primeira vez em 1953.",
+            "A Primeira Guerra Mundial durou de 1914 a 1918 e envolveu mais de 70 milhões de militares de diferentes países."
+        ]
+    }
+]

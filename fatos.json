@@ -1,0 +1,47 @@
+[
+    {
+        "titulo": "10 Curiosidades sobre o universo",
+        "fatos": [
+            "O universo tem cerca de 13,8 bilhões de anos.",
+            "Acredita-se que o universo seja composto por cerca de 5% de matéria comum, 27% de matéria escura e 68% de energia escura.",
+            "Existem mais estrelas no universo do que grãos de areia em todas as praias da Terra.",
+            "A luz leva aproximadamente 8 minutos e 20 segundos para percorrer a distância entre o Sol e a Terra.",
+            "A temperatura mais fria do universo conhecida pelos cientistas é de -273,15 graus Celsius, conhecida como zero absoluto.",
+            "O universo está se expandindo em todas as direções, o que significa que todas as galáxias estão se afastando umas das outras.",
+            "Os buracos negros são regiões do espaço-tempo com uma gravidade tão forte que nada pode escapar de sua atração, nem mesmo a luz.",
+            "Existem bilhões de galáxias no universo observável.",
+            "Acredita-se que o universo esteja infinitamente grande, embora a parte observável seja limitada.",
+            "Os cientistas ainda não sabem ao certo o que causou o Big Bang, que deu origem ao universo."
+        ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre a natureza",
+        "fatos": [
+            "As formigas podem suportar até 5.000 vezes o seu próprio peso.",
+            "A Baleia Azul, o maior animal do planeta, pode chegar a medir cerca de 30 metros de comprimento.",
+            "As abelhas se comunicam dançando, movimentando-se em formas específicas para indicar a localização de fontes de alimentos.",
+            "O golfinho nariz-de-garrafa é conhecido por ter nomes individuais para se referir uns aos outros.",
+            "O líquen é uma forma de vida composta por uma relação simbiótica entre um fungo e uma alga.",
+            "A água-viva-turritópsis, também conhecida como 'água-viva imortal', é capaz de reverter seu ciclo de vida e envelhecer novamente.",
+            "Os corvos são conhecidos por serem extremamente inteligentes e capazes de resolver problemas complexos.",
+            "O dióxido de carbono é o principal gás responsável pelo efeito estufa e contribui para o aquecimento global.",
+            "O solo é um recurso natural não renovável que pode levar séculos para se formar.",
+            "As árvores de baobá, nativas da África e Austrália, podem armazenar até 120.000 litros de água em seus troncos."
+        ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre a tecnologia",
+        "fatos": [
+            "O primeiro telefone celular foi lançado pela Motorola em 1983, e pesava cerca de 1 kg.",
+            "A primeira câmera digital foi inventada pela engenheira da Kodak, Steven Sasson, em 1975. Ela tinha uma resolução de 0,01 megapixels.",
+            "A internet foi desenvolvida nos anos 1960 como um projeto militar chamado ARPANET.",
+            "O primeiro videogame comercialmente bem-sucedido foi o Pong, lançado em 1972.",
+            "O primeiro computador pessoal, o Altair 8800, foi lançado em 1975 e tinha apenas 256 bytes de memória.",
+            "A World Wide Web (www) foi inventada por Tim Berners-Lee em 1989.",
+            "O primeiro iPhone foi lançado em 2007 pela Apple.",
+            "O nome Google é uma referência ao termo matemático 'googol', que representa o número 1 seguido de 100 zeros.",
+            "O primeiro e-mail foi enviado em 1971 por Ray Tomlinson.",
+            "A primeira impressora a laser foi lançada pela IBM em 1975."
+        ]
+    }
+]

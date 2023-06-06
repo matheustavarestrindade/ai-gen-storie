@@ -1,5 +1,17 @@
-import ffmpeg from "ffmpeg";
 import fs from "fs/promises";
+import facts from "../fatos.json";
+import { spawn } from "child_process";
+interface CreateTextCommand {
+    text: string;
+    x: string;
+    y: string;
+    fontSize: number;
+    fontColor: string;
+    startSecond: number;
+    endSecond: number;
+}
+
+const VIDEO_TIME_SECONDS = 61;
 
 const createVideo = async () => {
     // Select random video from videos folder
@@ -14,61 +26,139 @@ const createVideo = async () => {
     const output = await fs.readdir("./output");
     const videoNumber = output.length;
     console.log(`Video number ${videoNumber}`);
-    // Create video
-    const process = new ffmpeg(`./videos/${randomVideo}`);
-    process.then((video) => {
-        video.addCommand("-i", `./sounds/${randomAudio}`);
-        // Map audio to video
-        video.addCommand("-map", "0:v:0 -map 1:a:0");
-        // Set duration to 10 seconds
-        video.addCommand("-t", "10");
-        // Create title on top center
-        const TITLE = createShowTextCommand({
-            text: "Hello World",
-            x: "(w-text_w)/2",
-            y: "(h-text_h)-700",
-            fontSize: 100,
-            color: "white",
-            startSecond: 0,
-            endSecond: 10,
-            textStayTime: 5,
-        });
-        // Create subtitle on bottom center
-        const SUBTITLE = createShowTextCommand({
-            text: "Hello World",
-            x: "(w-text_w)/2",
-            y: "(h-text_h)-500",
-            fontSize: 100,
-            color: "white",
-            startSecond: 0,
-            endSecond: 10,
-            textStayTime: 5,
-        });
 
-        // Set aspect ratio to youtube short 9:16 and fit video to new aspect ratio without black borders
-        video.addCommand("-vf", `"${CROP_TO_YT_SHORT},${TITLE},${SUBTITLE}"`);
-        // Set output file name
-        video.save(`./output/video-${videoNumber}.mp4`);
+    const grayScaleFilter = "hue=s=0";
+
+    const fact = facts[Math.floor(Math.random() * facts.length)];
+    // Remove fact from array
+    facts.splice(facts.indexOf(fact), 1);
+    // Update facts.json
+    await fs.writeFile("./fatos.json", JSON.stringify(facts, null, 4));
+    // Update already used facts
+    const usedFacts = await fs.readFile("./usedFatos.json", "utf-8");
+    const usedFactsJson = JSON.parse(usedFacts);
+    usedFactsJson.push(fact);
+    await fs.writeFile("./usedFatos.json", JSON.stringify(usedFactsJson, null, 4));
+
+    // Create title on top center
+    const TITLE = createTitle(fact.titulo, 0, VIDEO_TIME_SECONDS, 22, 5).join(",");
+
+    // Create description on bottom center
+    const descriptions = [];
+    let delayToStart = 5;
+    let timePerDescription = (VIDEO_TIME_SECONDS - delayToStart) / fact.fatos.length;
+    for (let i = 0; i < fact.fatos.length; i++) {
+        const text = fact.fatos[i];
+        const startTime = timePerDescription * i + delayToStart;
+        const endTime = timePerDescription * (i + 1) + delayToStart;
+
+        const description = createSubtitles(text, 5, 30, startTime, endTime);
+        descriptions.push(...description);
+    }
+
+    const CROP_TO_YT_SHORT = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920";
+    const AUDIO_AND_VIDEO = [`-stream_loop`, "-1", "-i", `./videos/${randomVideo}`, "-stream_loop", "-1", "-i", `./sounds/${randomAudio}`, "-map", "0:v:0", "-map", "1:a:0"];
+    const FILTERS = ["-vf", `${grayScaleFilter},${CROP_TO_YT_SHORT},${TITLE},${descriptions.join(",")}`];
+    const OUTPUT = `./output/video-${videoNumber}.mp4`;
+    const DURATION = ["-t", `${VIDEO_TIME_SECONDS}`];
+
+    // Log the full command
+    console.log(`ffmpeg ${[...AUDIO_AND_VIDEO, ...FILTERS, ...DURATION, OUTPUT].join(" ")}`);
+
+    const CMD_CONSOLE = spawn("ffmpeg", [...AUDIO_AND_VIDEO, ...FILTERS, ...DURATION, OUTPUT]);
+
+    // Output log to console
+    CMD_CONSOLE.stdout.on("data", (data) => {
+        console.log(data.toString());
+    });
+
+    // Output error to console
+    CMD_CONSOLE.stderr.on("data", (data) => {
+        console.error(data.toString());
     });
 };
 
-const CROP_TO_YT_SHORT = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920";
+const createTitle = (text: string, startTime: number, endTime: number, maxLineLength: number, maxWords: number) => {
+    const descriptions = [];
+    const words = text.split(" ");
+    const lines = [];
 
-const createShowTextCommand = (data: { textStayTime: number; text: string; x: string; y: string; fontSize: number; color: string; startSecond: number; endSecond: number }) => {
-    const { text, x, y, fontSize: size, color, startSecond, endSecond, textStayTime } = data;
+    let line = "";
+    let lineCount = 0;
+    for (const word of words) {
+        if (lineCount >= maxWords || line.length + word.length >= maxLineLength) {
+            lines.push(line);
+            line = "";
+            lineCount = 0;
+        }
+        line += word + " ";
+        lineCount++;
+    }
+    if (lineCount > 0) lines.push(line); // Add last line if it's not full of words
 
-    const moveTime = (endSecond - startSecond - textStayTime) / 2;
+    let index = 0;
+    for (const line of lines) {
+        const description = createShowTextCommand({
+            text: line,
+            x: "(w-text_w)/2",
+            y: "(h-text_h)/2" + " - " + (600 - index * 120),
+            fontSize: 100,
+            fontColor: "white",
+            startSecond: startTime,
+            endSecond: endTime,
+        });
+        descriptions.push(description);
+        index++;
+    }
+    return descriptions;
+};
 
-    // Move text to screen, stay on screen, move out of screen using textStayTime
+const createSubtitles = (text: string, maxWords: number, maxLineLength: number, startTime: number, endTime: number) => {
+    const descriptions = [];
+    const words = text.split(" ");
+    const lines = [];
 
-    const transitionX = `x='if(lt(t,${startSecond}),0 - w,if(lt(t, ${startSecond + moveTime}),(((1 - (t - ${startSecond})/${moveTime})) * -w) + ${x},if(lt(t,${
-        endSecond - moveTime
-    }),${x},if(lt(t,${endSecond}),(((t - ${endSecond - moveTime})/${moveTime}) * (w + text_w) + ${x} ),(w +text_w) + ${x}))))'`;
-    const transitionY = `y=${y}`;
+    let line = "";
+    let lineCount = 0;
+    for (const word of words) {
+        if (lineCount >= maxWords || line.length + word.length >= maxLineLength) {
+            lines.push(line);
+            line = "";
+            lineCount = 0;
+        }
+        line += word + " ";
+        lineCount++;
+    }
+    if (lineCount > 0) lines.push(line); // Add last line if it's not full of words
+
+    let index = 0;
+    for (const line of lines) {
+        const description = createShowTextCommand({
+            text: line,
+            x: "(w-text_w)/2",
+            y: "(h-text_h) - " + (900 - index * 100),
+            fontSize: 70,
+            fontColor: "white",
+            startSecond: startTime,
+            endSecond: endTime,
+        });
+        index++;
+        descriptions.push(description);
+    }
+    return descriptions;
+};
+
+const createShowTextCommand = (data: CreateTextCommand) => {
+    const { text, x, y, fontSize: size, fontColor: color, startSecond, endSecond } = data;
+
+    //  safe for FFMPEG
+    let safeText = text.replace(/%/g, "\\%");
 
     const fontFile = `fontfile=./fonts/Roboto-Regular.ttf`;
+    // Make box rounded
+    const drawBox = `box=1:boxcolor=#450ec7:boxborderw=30`;
 
-    return `drawtext=${fontFile}:text='${text}':${transitionX}:${transitionY}:fontsize=${size}:fontcolor=${color}:enable='between(t,${startSecond},${endSecond})'`;
+    return `drawtext=${fontFile}:${drawBox}:expansion=none:text='${safeText}':x=${x}:y=${y}:fontsize=${size}:fontcolor=${color}:enable='between(t,${startSecond},${endSecond})'`;
 };
 
 createVideo();
