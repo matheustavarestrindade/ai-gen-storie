@@ -28,5 +28,140 @@
             "O Monte Everest, a montanha mais alta do mundo, foi escalado pela primeira vez em 1953.",
             "A Primeira Guerra Mundial durou de 1914 a 1918 e envolveu mais de 70 milhões de militares de diferentes países."
         ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre a natureza",
+        "fatos": [
+            "As formigas podem suportar até 5.000 vezes o seu próprio peso.",
+            "A Baleia Azul, o maior animal do planeta, pode chegar a medir cerca de 30 metros de comprimento.",
+            "As abelhas se comunicam dançando, movimentando-se em formas específicas para indicar a localização de fontes de alimentos.",
+            "O golfinho nariz-de-garrafa é conhecido por ter nomes individuais para se referir uns aos outros.",
+            "O líquen é uma forma de vida composta por uma relação simbiótica entre um fungo e uma alga.",
+            "A água-viva-turritópsis, também conhecida como 'água-viva imortal', é capaz de reverter seu ciclo de vida e envelhecer novamente.",
+            "Os corvos são conhecidos por serem extremamente inteligentes e capazes de resolver problemas complexos.",
+            "O dióxido de carbono é o principal gás responsável pelo efeito estufa e contribui para o aquecimento global.",
+            "O solo é um recurso natural não renovável que pode levar séculos para se formar.",
+            "As árvores de baobá, nativas da África e Austrália, podem armazenar até 120.000 litros de água em seus troncos."
+        ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre a tecnologia",
+        "fatos": [
+            "O primeiro telefone celular foi lançado pela Motorola em 1983, e pesava cerca de 1 kg.",
+            "A primeira câmera digital foi inventada pela engenheira da Kodak, Steven Sasson, em 1975. Ela tinha uma resolução de 0,01 megapixels.",
+            "A internet foi desenvolvida nos anos 1960 como um projeto militar chamado ARPANET.",
+            "O primeiro videogame comercialmente bem-sucedido foi o Pong, lançado em 1972.",
+            "O primeiro computador pessoal, o Altair 8800, foi lançado em 1975 e tinha apenas 256 bytes de memória.",
+            "A World Wide Web (www) foi inventada por Tim Berners-Lee em 1989.",
+            "O primeiro iPhone foi lançado em 2007 pela Apple.",
+            "O nome Google é uma referência ao termo matemático 'googol', que representa o número 1 seguido de 100 zeros.",
+            "O primeiro e-mail foi enviado em 1971 por Ray Tomlinson.",
+            "A primeira impressora a laser foi lançada pela IBM em 1975."
+        ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre o universo",
+        "fatos": [
+            "O universo tem cerca de 13,8 bilhões de anos.",
+            "Acredita-se que o universo seja composto por cerca de 5% de matéria comum, 27% de matéria escura e 68% de energia escura.",
+            "Existem mais estrelas no universo do que grãos de areia em todas as praias da Terra.",
+            "A luz leva aproximadamente 8 minutos e 20 segundos para percorrer a distância entre o Sol e a Terra.",
+            "A temperatura mais fria do universo conhecida pelos cientistas é de -273,15 graus Celsius, conhecida como zero absoluto.",
+            "O universo está se expandindo em todas as direções, o que significa que todas as galáxias estão se afastando umas das outras.",
+            "Os buracos negros são regiões do espaço-tempo com uma gravidade tão forte que nada pode escapar de sua atração, nem mesmo a luz.",
+            "Existem bilhões de galáxias no universo observável.",
+            "Acredita-se que o universo esteja infinitamente grande, embora a parte observável seja limitada.",
+            "Os cientistas ainda não sabem ao certo o que causou o Big Bang, que deu origem ao universo."
+        ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre alimentos",
+        "fatos": [
+            "O chocolate contém uma substância chamada feniletilamina, que é liberada no cérebro quando estamos apaixonados.",
+            "As bananas são naturalmente radioativas devido ao teor de potássio-40, mas o nível de radiação é extremamente baixo e não representa riscos para a saúde.",
+            "O manjericão é considerado um afrodisíaco natural.",
+            "A batata doce é uma das fontes mais ricas de vitamina A.",
+            "O açafrão é a especiaria mais cara do mundo, pois é necessário colher manualmente os estigmas das flores para obter a especiaria.",
+            "O molho de soja foi inventado na China há mais de 2.500 anos.",
+            "As cenouras originalmente eram roxas e só foram se tornar laranjas por seleção artificial no século XVII.",
+            "O queijo é o produto alimentício mais roubado no mundo.",
+            "O maracujá contém uma enzima chamada bromelina, que pode ser usada como amaciante de carne.",
+            "O vinho tinto contém resveratrol, um composto que pode ser benéfico para a saúde do coração."
+        ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre o espaço sideral",
+        "fatos": [
+            "O espaço é completamente silencioso porque não há ar ou moléculas para transmitir o som.",
+            "Em média, um único buraco negro supermassivo contém a massa equivalente a cerca de um bilhão de sóis.",
+            "A Terra não é um círculo perfeito, mas sim um pouco achatada nos polos e levemente alargada no equador.",
+            "A cor dos raios cósmicos que chegam à Terra muda à medida que viajam pelo espaço devido ao efeito Doppler.",
+            "O Sol compõe cerca de 99,86% da massa total do Sistema Solar.",
+            "No espaço, objetos flutuam porque não há gravidade para puxá-los para baixo.",
+            "Há uma enorme nuvem de álcool no espaço que contém álcool etílico, o mesmo encontrado em bebidas alcoólicas.",
+            "A estrela mais próxima da Terra, além do Sol, é Proxima Centauri, localizada a cerca de 4,24 anos-luz de distância.",
+            "A Via Láctea, nossa galáxia, tem cerca de 100 bilhões de estrelas.",
+            "A temperatura no espaço profundo é quase zero absoluto, chegando a cerca de -270,45 graus Celsius."
+        ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre esportes",
+        "fatos": [
+            "O esporte mais popular do mundo é o futebol, com mais de 4 bilhões de fãs.",
+            "A partida de tênis mais longa da história durou 11 horas e 5 minutos.",
+            "O golfe é o único esporte já jogado na Lua. Alan Shepard, astronauta da NASA, jogou golfe na Lua durante a missão Apollo 14.",
+            "O jogo de xadrez possui mais de 169.518.829.100.544.000.000.000.000.000.000 maneiras possíveis de ser jogado.",
+            "O boxe é um dos esportes mais antigos, tendo sido praticado pelos antigos gregos já no século VIII a.C.",
+            "A Copa do Mundo de Rugby é o terceiro maior evento esportivo do mundo, depois das Olimpíadas e da Copa do Mundo de Futebol.",
+            "O basquete foi inventado por James Naismith em 1891, usando uma bola de futebol e cestas de pêssego como aro.",
+            "O tênis de mesa é o esporte de raquete mais rápido do mundo, com a bola atingindo velocidades de até 112 km/h.",
+            "A Maratona, uma corrida de 42,195 km, recebe esse nome em homenagem a uma lenda da Grécia Antiga, onde um soldado correu essa distância para levar uma mensagem de Atenas a Maratona.",
+            "O golfe é o único esporte já jogado na Lua. Alan Shepard, astronauta da NASA, jogou golfe na Lua durante a missão Apollo 14."
+        ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre o corpo humano",
+        "fatos": [
+            "O cérebro humano consome cerca de 20% da energia total do corpo, apesar de representar apenas 2% do peso total.",
+            "O corpo humano produz cerca de um litro de saliva por dia.",
+            "Existem mais bactérias no corpo humano do que células humanas.",
+            "Os ácidos do estômago são tão corrosivos que podem dissolver até mesmo lâminas de metal.",
+            "O fêmur, o osso mais longo do corpo humano, é cerca de 4 vezes mais resistente que o concreto.",
+            "O ácido clorídrico presente no estômago é forte o suficiente para dissolver metais, mas o revestimento do estômago impede que ele se dissolva.",
+            "Os músculos do corpo humano são capazes de exercer força suficiente para levantar até 15 toneladas.",
+            "As unhas das mãos crescem mais rapidamente do que as unhas dos pés.",
+            "O olho humano é capaz de distinguir cerca de 10 milhões de cores diferentes.",
+            "O coração humano bate cerca de 100 mil vezes por dia."
+        ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre o oceano",
+        "fatos": [
+            "A maior parte do oceano é inexplorada, com mais de 80% do fundo do mar ainda não mapeado.",
+            "A pressão na Fossa das Marianas, o ponto mais profundo dos oceanos, é mais de 1.000 vezes maior do que a pressão ao nível do mar.",
+            "Cerca de 70% do oxigênio que respiramos é produzido por algas marinhas.",
+            "O maior animal do mundo, a baleia-azul, vive nos oceanos e pode chegar a medir mais de 30 metros de comprimento.",
+            "A Grande Barreira de Corais, localizada na Austrália, é o maior organismo vivo do planeta.",
+            "Estima-se que existam cerca de 20 milhões de toneladas de ouro dissolvidas nos oceanos.",
+            "As marés são causadas principalmente pela atração gravitacional entre a Lua e a Terra.",
+            "A água do mar contém cerca de 3,5% de sal.",
+            "Existem mais de 20.000 espécies conhecidas de peixes nos oceanos.",
+            "A água do mar é cerca de 800 vezes mais densa que a água doce."
+        ]
+    },
+    {
+        "titulo": "10 Curiosidades sobre animais",
+        "fatos": [
+            "As girafas têm a mesma quantidade de vértebras no pescoço que os seres humanos: sete.",
+            "O coração do beija-flor bate cerca de 1.260 vezes por minuto.",
+            "Os pinguins têm apenas um parceiro para toda a vida e costumam trocar pedrinhas como presente.",
+            "A capacidade de memória dos elefantes é tão forte que eles podem se lembrar de outros elefantes mesmo depois de décadas sem se encontrarem.",
+            "As abelhas podem reconhecer rostos humanos individuais.",
+            "Os cães têm um senso apurado de olfato e podem ser treinados para detectar doenças como câncer e diabetes.",
+            "Os camaleões podem mover seus olhos independentemente um do outro, permitindo que olhem em duas direções diferentes ao mesmo tempo.",
+            "As vacas têm melhores amigos e sofrem de estresse quando são separadas deles.",
+            "Os coelhos têm visão panorâmica de quase 360 graus e podem ver atrás de si sem precisar mover a cabeça.",
+            "O narval, uma espécie de baleia, tem um dente longo e afiado que pode atingir até 3 metros de comprimento."
+        ]
     }
 ]

@@ -152,7 +152,7 @@ const createShowTextCommand = (data: CreateTextCommand) => {
     const { text, x, y, fontSize: size, fontColor: color, startSecond, endSecond } = data;
 
     //  safe for FFMPEG
-    let safeText = text.replace(/%/g, "\\%");
+    let safeText = text.replace(/%/g, "\\%").replace("-", "\\-").replace(": ", "\\: ");
 
     const fontFile = `fontfile=./fonts/Roboto-Regular.ttf`;
     // Make box rounded
