@@ -1,4 +1,4 @@
 node_modules
-videos/*
-sounds/*
-output/*
+videos/*.mp4
+sounds/*.mp3
+output/*.mp4
