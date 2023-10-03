@@ -32,6 +32,10 @@ To use this project, follow these steps:
 
 6. Once the script is complete, you will find the output video in the `output` folder.
 
+## Example video
+
+https://github.com/matheustavarestrindade/ai-gen-storie/assets/77441986/361504e5-198d-45ad-bd29-99581ef0c9ce
+
 ## How It Works
 
 The project works by selecting a random video from the `videos` folder and a random music track from the `sounds` folder. It then reads the `fatos.json` file to extract facts and information. These facts are used to generate subtitles for the video.
