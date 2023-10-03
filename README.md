@@ -1,4 +1,4 @@
-# Project Description: NodeJS Video Generator with Subtitles
+# Automated generation of TikTok fact videos 
 
 ## Introduction
 
